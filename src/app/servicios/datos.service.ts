@@ -8,7 +8,7 @@ export class DatosService {
   private persona_info: Persona = {
     nombre: "Juan David",
     apellidos: "Osorio Ramirez",
-    direccion: "C/ Conde de Orgaz 1, 1º6. Yuncos Toledo",
+    direccion: "C/ Alejo Carpentier 13 Bajo C, Illescas, Toledo",
     fecha_nacimiento: "1986-09-29",
     email: "juan_david_osorio@outlook.es",
     objetivo_laboral:
