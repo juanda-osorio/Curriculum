@@ -25,8 +25,8 @@ export class DatosService {
         puesto: "Analista-Programador",
         empresa: "BBVA/Aubay",
         fecha_inicio: "04-11-2019",
-        fecha_fin: "",
-        actualidad: true,
+        fecha_fin: "17-05-2020",
+        actualidad: false,
         tecnologia_usada: 
           "MYSQL, HTML, CSS, JAVASCRIPT, AJAX, JSON, BOOTSTRAP, JQUERY, PHP, GIT, SVN, DevOps",
         tareas: "Crear funcionalidades nuevas para las aplicaciones existentes que usan los clientes internos del banco, asi como reparar y mantener dichas aplicaciones",
