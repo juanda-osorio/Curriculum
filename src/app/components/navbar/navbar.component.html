@@ -1,0 +1,29 @@
+<nav id="id_navbar" class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item" routerLinkActive="active">
+                <a class="btn btn-outline-light" href="#">Inicio <span class="sr-only">(current)</span> </a>
+                <!-- <button type="submit" class="btn btn-dark">Inicio</button> -->
+            </li>
+
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['datos']">Sobre Mí</a>
+            </li>
+
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" routerLink="experiencia" href="#">Experiencia</a>
+            </li>
+
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['formacion']" href="#" tabindex="-1" aria-disabled="true">Formación</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['conocimientos']" href="#" tabindex="-1" aria-disabled="true">Conocimientos</a>
+            </li>
+
+        </ul>
+    </div>
+
+</nav>

@@ -1,0 +1,18 @@
+<div class="container-fluid animated fast fadeIn">
+
+    <div class="row">
+        <div class="card-columns col">
+            <div class="card" *ngFor="let expe of experiencias">
+                <div class="card-body ">
+                    <h5 class="card-title"> <span class="titulos">Puesto:</span> {{ expe.puesto }} </h5>
+                    <p class="card-text"> <span class="titulos">Empresa:</span> {{ expe.empresa }} </p>
+                    <p class="card-text"> <span class="titulos">Fecha Inicio:</span> {{expe.fecha_inicio}} </p>
+                    <p class="card-text" *ngIf="!expe.actualidad"> <span class="titulos">Fecha Fin:</span> {{expe.fecha_fin}} </p>
+                    <p class="card-text" *ngIf="expe.actualidad"> Trabajo Actual </p>
+                    <p class="card-text"> <span class="titulos">Tecnologias:</span> {{expe.tecnologia_usada}} </p>
+                    <p class="card-text"> <span class="titulos">Tareas:</span> {{expe.tareas}} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

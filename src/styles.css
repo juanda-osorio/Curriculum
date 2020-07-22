@@ -1,0 +1,71 @@
+#id_jumbotron_inicio {
+    margin-top: 50px;
+}
+
+li {
+    margin-left: 20px;
+}
+
+.nav-link {
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#contenedorPrincipal {
+    margin-top: 20px;
+    /* background-image: url('assets/imagenes/wolf.jpg');
+    background-size: cover; */
+}
+
+#id_navbar {
+    padding-bottom: 4px;
+}
+
+#id_imagenJuan {
+    width: 250px;
+    margin: 0 auto;
+}
+
+#nombreTitulo {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.titulos {
+    font-weight: bold;
+    color: #007bff;
+}
+
+footer {
+    margin-top: 10px;
+}
+
+
+/*Animaciones*/
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}

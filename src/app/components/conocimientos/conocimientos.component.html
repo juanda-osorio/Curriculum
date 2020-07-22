@@ -1,0 +1,18 @@
+<div class="row animated fast fadeIn">
+    <div class="col-4">
+        <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-lenguajes-list" data-toggle="list" href="#list-lenguajes" role="tab" aria-controls="lenguajes">Lenguajes de Programación</a>
+            <a class="list-group-item list-group-item-action" id="list-bbdd-list" data-toggle="list" href="#list-bbdd" role="tab" aria-controls="bbdd">Bases de Datos</a>
+            <a class="list-group-item list-group-item-action" id="list-ssoo-list" data-toggle="list" href="#list-ssoo" role="tab" aria-controls="ssoo">Sistemas Operativos</a>
+            <a class="list-group-item list-group-item-action" id="list-otros-list" data-toggle="list" href="#list-otros" role="tab" aria-controls="otros">Otros</a>
+        </div>
+    </div>
+    <div class="col-8">
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="list-lenguajes" role="tabpanel" aria-labelledby="list-lenguajes-list">{{objeto_conocimiento.lenguajes_programacion}}</div>
+            <div class="tab-pane fade" id="list-bbdd" role="tabpanel" aria-labelledby="list-bbdd-list">{{objeto_conocimiento.bbdd}}</div>
+            <div class="tab-pane fade" id="list-ssoo" role="tabpanel" aria-labelledby="list-ssoo-list">{{objeto_conocimiento.ssoo}}</div>
+            <div class="tab-pane fade" id="list-otros" role="tabpanel" aria-labelledby="list-otros-list">{{objeto_conocimiento.otros}}</div>
+        </div>
+    </div>
+</div>
