@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class DatosService {
 
   private persona_info: Persona = {
+
     nombre: "Juan David",
     apellidos: "Osorio Ramirez",
     direccion: "C/ Alejo Carpentier 13 Bajo C, Illescas, Toledo",
@@ -125,8 +126,8 @@ export class DatosService {
   }
 
   getConocimientos(): Conocimientos{
-    let cono = this.persona_info.conocimientos;
-    return cono;
+    let knowledge = this.persona_info.conocimientos;
+    return knowledge;
   }
 
 }//fin clase
