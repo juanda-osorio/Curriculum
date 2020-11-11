@@ -9,10 +9,13 @@ import { Router } from '@angular/router';
 })
 export class ExperienciaComponent implements OnInit {
   experiencias: Experiencia[];
+  ordenar: boolean;
 
   constructor(
     private _datosService: DatosService,
     private _router: Router) {
+      
+      this.ordenar = false;
   }
   
   ngOnInit(): void {
@@ -22,6 +25,6 @@ export class ExperienciaComponent implements OnInit {
   public verParte(parteEspecifica: string){
     const parte = parteEspecifica.toLowerCase();
      this._router.navigate([parte]);
-  }
+  }  
 
 }
