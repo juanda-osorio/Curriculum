@@ -69,3 +69,18 @@ footer {
 .fadeIn {
     animation-name: fadeIn;
 }
+
+
+/*INTENTO DE FLEXBOX*/
+
+.card-columns {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card {
+    /* flex-basis: 45%; Funciona mejor con el flex-direction: row. */
+    flex-grow: 1;
+}
