@@ -1,0 +1,42 @@
+<div class="container mt-5">
+
+    <h2>Envíame cualquier sugerencia o información:</h2>
+
+    <form class="mt-5" autocomplete="off" [formGroup]="formulario" (ngSubmit)="guardar()">
+
+        <div class="row form-group">
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Nombre *" formControlName="nombre" [class.is-invalid]="campoNoValido('nombre')">
+                <small *ngIf="campoNoValido('nombre')">Por favor, escribe un nombre</small>
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Apellido" formControlName="apellido">
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col">
+                <input type="email" class="form-control" placeholder="Email *" formControlName="correo" [class.is-invalid]="campoNoValido('correo')">
+                <small *ngIf="campoNoValido('correo')">Por favor, escribe un email válido</small>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col">
+                <textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="Deja tu comentario aqui... *" formControlName="comentario" [class.is-invalid]="campoNoValido('comentario')"></textarea>
+                <small *ngIf="campoNoValido('comentario')"> Por favor, escribe un comentario (Mín 10 Caracteres *) </small>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-6">
+                <button class="btn btn-outline-primary">
+                    Enviar
+                </button>
+            </div>
+        </div>
+
+    </form>
+
+
+</div>

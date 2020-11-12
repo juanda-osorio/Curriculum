@@ -76,7 +76,7 @@ export class DatosService {
     ],
     formacion:
     [
-      "Actualmente estudiando por cuenta propia un curso de NodeJS y AngularJS",
+      "Actualmente estudiando por cuenta propia un curso de NodeJS y Angular (MEAN)",
       "2016 - Programacion orientada a objetos y Bases de Datos relacionales. Duracion: 710 Horas",
       "2013 – 2015. Desarrollo de Aplicaciones Web.  Instituto Laguna de Joatzel. 2000 Horas",
       "2013 - Gestion Base Datos Relacionales Oracle.  Duracion: 250 Horas",
