@@ -17,7 +17,7 @@ export class SugerenciasFirebaseService {
     return this.http.post(`${this.url}/sugerencias.json`, sugerencia).
       pipe(
         map(resp =>{
-          console.log(resp);
+          // console.log(resp);
         })
       )
   }

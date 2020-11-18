@@ -16,7 +16,7 @@ export class ContactoComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
               private _sugerenciaService: SugerenciasFirebaseService) { 
     this.crearForm();
-     this.cargarInfoFormulario();
+    //  this.cargarInfoFormulario();
   }
 
   ngOnInit(): void {
