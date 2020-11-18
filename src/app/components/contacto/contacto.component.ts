@@ -1,6 +1,8 @@
+import { SugerenciasFirebaseService } from './../../servicios/sugerencias-firebase.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal  from 'sweetalert2';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-contacto',
@@ -9,10 +11,10 @@ import Swal  from 'sweetalert2';
 })
 export class ContactoComponent implements OnInit {
     
-  formulario: FormGroup;
-  
+  formulario: FormGroup;  
 
-  constructor(private formBuilder: FormBuilder) { 
+  constructor(private formBuilder: FormBuilder,
+              private _sugerenciaService: SugerenciasFirebaseService) { 
     this.crearForm();
      this.cargarInfoFormulario();
   }
@@ -49,18 +51,33 @@ export class ContactoComponent implements OnInit {
 
 
   guardar(){
-    console.log(this.formulario);
-    
+
+    let peticionGuardar: Observable<any>;
+
     if (this.formulario.invalid) {
       return this.formulario.markAllAsTouched();
     }else{
-      
+
       Swal.fire({
-        // position: "top",
-        icon  : 'success',
-        title : 'Bien!',
-        text  : 'Se han enviado los comentarios correctamente'
+        position: 'top',
+        icon  : 'info',
+        title : 'Espere',
+        text  : 'Guardando información',
+        // allowOutsideClick: false
       });
+      Swal.showLoading();
+    
+      peticionGuardar = this._sugerenciaService.guardarSugerencia(this.formulario.value);
+      
+      peticionGuardar.subscribe( resp=> {
+        Swal.fire({
+          position: "top",
+          icon  : 'success',
+          title : 'Bien!',
+          text  : 'Se han enviado los comentarios correctamente'
+        });
+      })
+
       
     }
     
