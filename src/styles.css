@@ -84,3 +84,9 @@ footer {
     /* flex-basis: 45%; Funciona mejor con el flex-direction: row. */
     flex-grow: 1;
 }
+
+@media(max-width:990px) {
+    #boton_inicio {
+        display: none;
+    }
+}
