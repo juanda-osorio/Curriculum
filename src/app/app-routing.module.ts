@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'formacion', component: FormacionComponent },
   { path: 'conocimientos', component: ConocimientosComponent },
   { path: 'contacto', component: ContactoComponent },
+  {path: '', pathMatch: 'full', redirectTo: 'inicio'},
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 ];
 
