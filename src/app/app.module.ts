@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 //RUTAS
@@ -37,6 +38,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
     CommonModule,
     ReactiveFormsModule,
     HttpClientModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

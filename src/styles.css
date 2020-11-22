@@ -86,7 +86,7 @@ footer {
 }
 
 @media(max-width:990px) {
-    #boton_inicio {
+    /* #boton_inicio {
         display: none;
-    }
+    } */
 }

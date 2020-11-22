@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-//import { Router } from '@angular/router';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+ 
 
 @Component({
   selector: 'app-navbar',
@@ -7,11 +8,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  mostrar: boolean = true;
+  plegar: boolean;
 
-  constructor(/*private _router: Router*/) { }
+  constructor(private _breakPointObserver: BreakpointObserver) {
+    this.plegar = false;
+  }
 
   ngOnInit(): void {
+    
+  }
+
+  autoplegable(){
+    /* Librería Angular-CDK para 'observar' partes del html; en este caso,
+     * una mediaQuery.  */
+    if (this._breakPointObserver.isMatched('(max-width: 990px)')) {
+        this.plegar = true;
+
+        const nav = document.querySelector('#navbarNav');
+        nav.className = "collapse navbar-collapse mt-3 animated fadeIn";
+    }
+    
+    // this._breakPointObserver
+    //   .observe([ '(max-width: 990px)' ])
+    //   .subscribe((state: BreakpointState) =>{
+    //     if (state.matches) {
+    //       console.log("state matches!!");
+    //     }else{
+    //       console.log("state doesnt match!! ", state);
+    //     }
+    //   });
   }
 
 }

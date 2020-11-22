@@ -1,6 +1,6 @@
 <nav class="row" id="id_navbar" class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="botonDesplegable">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -13,21 +13,21 @@
             </li>
 
             <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" [routerLink]="['datos']">Sobre Mí</a>
+                <a (click)="autoplegable()" class="nav-link" [routerLink]="['datos']">Sobre Mí</a>
             </li>
 
             <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" routerLink="experiencia" href="#">Experiencia</a>
+                <a (click)="autoplegable()" class="nav-link" routerLink="experiencia" href="#">Experiencia</a>
             </li>
 
             <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" [routerLink]="['formacion']" href="#" tabindex="-1" aria-disabled="true">Formación</a>
+                <a (click)="autoplegable()" class="nav-link" [routerLink]="['formacion']" href="#" tabindex="-1" aria-disabled="true">Formación</a>
             </li>
             <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" [routerLink]="['conocimientos']" href="#" tabindex="-1" aria-disabled="true">Conocimientos</a>
+                <a (click)="autoplegable()" class="nav-link" [routerLink]="['conocimientos']" href="#" tabindex="-1" aria-disabled="true">Conocimientos</a>
             </li>
             <li class="nav-item" routerLinkActive="active">
-                <a href="#" class="nav-link" routerLink="contacto">Contacto</a>
+                <a (click)="autoplegable()" href="#" class="nav-link" routerLink="contacto">Contacto</a>
             </li>
 
         </ul>
