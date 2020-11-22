@@ -8,11 +8,7 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 })
 export class NavbarComponent implements OnInit {
 
-  plegar: boolean;
-
-  constructor(private _breakPointObserver: BreakpointObserver) {
-    this.plegar = false;
-  }
+  constructor(private _breakPointObserver: BreakpointObserver) { }
 
   ngOnInit(): void {
     
@@ -22,10 +18,10 @@ export class NavbarComponent implements OnInit {
     /* Librería Angular-CDK para 'observar' partes del html; en este caso,
      * una mediaQuery.  */
     if (this._breakPointObserver.isMatched('(max-width: 990px)')) {
-        this.plegar = true;
 
-        const nav = document.querySelector('#navbarNav');
-        nav.className = "collapse navbar-collapse mt-3 animated fadeIn";
+        let botonDesplegable: HTMLElement = 
+          document.getElementById('botonDesplegable') as HTMLElement;
+        botonDesplegable.click();
     }
     
     // this._breakPointObserver
