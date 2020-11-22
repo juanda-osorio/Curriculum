@@ -101,8 +101,8 @@ footer {
     }
     .boton_exp {
         flex-grow: 1 !important;
-        font-size: smaller !important;
-        text-align: left !important;
+        font-size: medium !important;
+        text-align: center !important;
     }
 }
 
@@ -112,5 +112,6 @@ footer {
         font-size: 13px !important;
         padding-right: 0 !important;
         padding-left: 7px !important;
+        text-align: center !important;
     }
 }
