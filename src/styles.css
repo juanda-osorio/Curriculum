@@ -93,7 +93,7 @@ footer {
     flex-grow: 1;
 }
 
-@media(max-width:500px) {
+@media(max-width:990px) {
     .div_boton_exp {
         display: flex !important;
         flex-flow: row wrap !important;
@@ -102,15 +102,6 @@ footer {
     .boton_exp {
         flex-grow: 1 !important;
         font-size: medium !important;
-        text-align: center !important;
-    }
-}
-
-@media(max-width:420px) {
-    .boton_exp {
-        width: 100% !important;
-        padding-right: 0 !important;
-        padding-left: 7px !important;
         text-align: center !important;
     }
 }

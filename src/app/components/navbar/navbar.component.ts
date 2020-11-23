@@ -8,7 +8,7 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private _breakPointObserver: BreakpointObserver) { }
+  constructor(private breakPointObserver: BreakpointObserver) { }
 
   ngOnInit(): void {
     
@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
   autoplegable(){
     /* Librería Angular-CDK para 'observar' partes del html; en este caso,
      * una mediaQuery.  */
-    if (this._breakPointObserver.isMatched('(max-width: 990px)')) {
+    if (this.breakPointObserver.isMatched('(max-width: 990px)')) {
 
         let botonDesplegable: HTMLElement = 
           document.getElementById('botonDesplegable') as HTMLElement;

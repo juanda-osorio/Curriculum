@@ -1,20 +1,38 @@
 <div class="container-fluid animated fast fadeIn">
-    <div class="container card">
-        <img id="id_imagenJuan" src="assets/imagenes/imagen juan.jpg" class="card-img-top" [alt]="datosJuanda.nombre">
-        <div class="card-body">
-            <h5 id='nombreTitulo' class="card-title text-center">{{datosJuanda.nombre}} {{datosJuanda.apellidos}} </h5>
-            <p class="card-text"><span class="titulos">Dirección:</span> {{datosJuanda.direccion}}</p>
-            <p class="card-text"><span class="titulos">Fecha de Nacimiento:</span> {{datosJuanda.fecha_nacimiento | date}}</p>
-            <p class="card-text"><span class="titulos">Edad:</span> {{datosJuanda.edad}}</p>
-            <p class="card-text"><span class="titulos">Email:</span> {{datosJuanda.email}}</p>
-            <p class="card-text"><span class="titulos">Objetivo Laboral: </span></p>
-            <ul class="card-text">
-                <li class="" *ngFor="let objetivo of datosJuanda.objetivo_laboral"> {{objetivo}} </li>
-            </ul>
-            <p class="card-text"><span class="titulos">Otros: </span> </p>
-            <ul class="card-text">
-                <li class="" *ngFor="let otro of datosJuanda.otros">{{otro}} </li>
-            </ul>
+
+    <div class="row justify-content-center migaPan" hidden>
+        <div class="col-11">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Sobre Mí</li>
+                </ol>
+            </nav>
         </div>
     </div>
+
+    <div class="row justify-content-center">
+        <div class="col-11">
+
+            <div class="container card">
+                <img id="id_imagenJuan" src="assets/imagenes/imagen juan.jpg" class="card-img-top" [alt]="datosJuanda.nombre">
+                <div class="card-body">
+                    <h5 id='nombreTitulo' class="card-title text-center">{{datosJuanda.nombre}} {{datosJuanda.apellidos}} </h5>
+                    <p class="card-text"><span class="titulos">Dirección:</span> {{datosJuanda.direccion}}</p>
+                    <p class="card-text"><span class="titulos">Fecha de Nacimiento:</span> {{datosJuanda.fecha_nacimiento | date}}</p>
+                    <p class="card-text"><span class="titulos">Edad:</span> {{datosJuanda.edad}}</p>
+                    <p class="card-text"><span class="titulos">Email:</span> {{datosJuanda.email}}</p>
+                    <p class="card-text"><span class="titulos">Objetivo Laboral: </span></p>
+                    <ul class="card-text">
+                        <li class="" *ngFor="let objetivo of datosJuanda.objetivo_laboral"> {{objetivo}} </li>
+                    </ul>
+                    <p class="card-text"><span class="titulos">Otros: </span> </p>
+                    <ul class="card-text">
+                        <li class="" *ngFor="let otro of datosJuanda.otros">{{otro}} </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 </div>

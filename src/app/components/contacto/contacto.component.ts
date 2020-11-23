@@ -1,5 +1,7 @@
+import { DatosService } from 'src/app/servicios/datos.service';
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { SugerenciasFirebaseService } from './../../servicios/sugerencias-firebase.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal  from 'sweetalert2';
 import { Observable } from 'rxjs';
@@ -14,12 +16,27 @@ export class ContactoComponent implements OnInit {
   formulario: FormGroup;  
 
   constructor(private formBuilder: FormBuilder,
-              private _sugerenciaService: SugerenciasFirebaseService) { 
+              private _sugerenciaService: SugerenciasFirebaseService,
+              private breakPointObserver: BreakpointObserver,
+              private _datosService: DatosService) { 
     this.crearForm();
     //  this.cargarInfoFormulario();
   }
 
   ngOnInit(): void {
+    if( this.breakPointObserver.isMatched('(max-width:990px)') ){
+      this._datosService.muestraBreadCrum("migaPan");
+    }
+  }
+
+  @HostListener('window:resize', ['event'])
+  onResize(event){
+    let tamanyoPantalla: number = 0;
+    tamanyoPantalla = window.innerWidth;
+    if (tamanyoPantalla <= 990) {
+      this._datosService.muestraBreadCrum("migaPan");
+    }else
+      this._datosService.ocultaBreadCrum("migaPan");
   }
 
 
@@ -38,7 +55,7 @@ export class ContactoComponent implements OnInit {
   }
   
   /*Aqui en el 'setValue' irían los campos por defecto que quiero que aparezcan en el form.
-  * Aunque para eso está el primer parámetro de 'crarForm', no???
+  * Aunque para eso está el primer parámetro de 'crearForm', no???
   */
   cargarInfoFormulario(){
     this.formulario.setValue({

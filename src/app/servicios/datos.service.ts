@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class DatosService {
 
+
   private persona_info: Persona = {
 
     nombre: "Juan David",
@@ -86,7 +87,7 @@ export class DatosService {
     ],
     conocimientos:
     {
-      lenguajes_programacion:"JavaSE, JSP, Spring Framework, Hibernate, C#, ASP.NET CORE 5.0, MVC, IoC, Factory, DI, Javascript, Jquery, Ajax, Json, Php,  Html5, CSS3, Bootstrap, Angular",
+      lenguajes_programacion:"Angular 10+,  TypeScript,  Javascript,  Jquery,  Sass, BEMIT, Flexbox, CSS GridLayout,  Html5,  CSS3,  Bootstrap, Firebase, PHP, JavaSE, JSP, Spring Framework, Hibernate, C#, asp.Net core 5.0,  Mvc, IoC, DI,  Ajax, Json",
       bbdd: "MySQL, Oracle, SQLServer",
       ssoo: "Windows, Linux",
       otros: "Drupal, Joomla, Prestashop, Wordpress"
@@ -128,6 +129,15 @@ export class DatosService {
   getConocimientos(): Conocimientos{
     let knowledge = this.persona_info.conocimientos;
     return knowledge;
+  }
+
+  muestraBreadCrum(idHtml: string){
+    const elemento = document.querySelector('.'+idHtml);
+    elemento.removeAttribute('hidden');
+  }
+  ocultaBreadCrum(idHtml: string){
+    const elemento = document.querySelector('.'+idHtml);
+    elemento.setAttribute('hidden', 'hidden');
   }
 
 }//fin clase
