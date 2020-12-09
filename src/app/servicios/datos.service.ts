@@ -10,7 +10,7 @@ export class DatosService {
 
     nombre: "Juan David",
     apellidos: "Osorio Ramirez",
-    direccion: "C/ Alejo Carpentier 13 Bajo C, Illescas, Toledo",
+    direccion: "C/ Fuente Redonda 20, Batres-Madrid",
     fecha_nacimiento: "1986-09-29",
     email: "juan_david_osorio@outlook.es",
     objetivo_laboral:

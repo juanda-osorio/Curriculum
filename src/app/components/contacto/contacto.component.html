@@ -16,7 +16,7 @@
 
         <div class="row form-group">
             <div class="col-6">
-                <input type="text" class="form-control" placeholder="Nombre *" formControlName="nombre" [class.is-invalid]="campoNoValido('nombre')">
+                <input type="text" class="form-control" name="nombre" placeholder="Nombre *" formControlName="nombre" [class.is-invalid]="campoNoValido('nombre')">
                 <small *ngIf="campoNoValido('nombre')">Por favor, escribe un nombre</small>
             </div>
             <div class="col-6">

@@ -1,0 +1,11 @@
+{
+    "$schema": "https://on.cypress.io/cypress.schema.json",
+    "chromeWebSecurity": false,
+    "fixturesFolder": "cypress/fixtures",
+    "integrationFolder": "cypress/integration",
+    "pluginsFile": "cypress/plugins",
+    "supportFile": "cypress/support",
+    "screenshotsFolder": "cypress/screenshots",
+    "videosFolder": "cypress/videos",
+    "baseUrl": "http://localhost:4200"
+}
