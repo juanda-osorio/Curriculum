@@ -24,6 +24,17 @@ export class DatosService {
     experiencia:
     [
       {
+        puesto: "Desarrollador Web",
+        empresa: "Rentamarkets",
+        fecha_inicio: "15-05-2021",
+        fecha_fin: "",
+        actualidad: true,
+        tecnologia_usada: 
+          "Framework Laravel, Vue, Docker, Kubernetes, Aws, Mysql, Bootstrap, Jquery, Git",
+        tareas: "Crear paginas web para la intranet que manejan los empleados de al empresa",
+
+      },
+      {
         puesto: "Analista-Programador",
         empresa: "BBVA/Aubay",
         fecha_inicio: "04-11-2019",
